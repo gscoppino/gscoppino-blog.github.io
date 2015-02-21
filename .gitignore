@@ -3,3 +3,4 @@ Vagrantfile
 provision/
 Gemfile*
 _site/
+.sass-cache/
