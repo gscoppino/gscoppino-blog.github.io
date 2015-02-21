@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Getting Friendly With GitHub & GitHub Pages"
+---
+
+I have been toying with [Github Pages][GHPages] lately, now that I have developed an interest in throwing some of my projects online. From what I've read and experienced, Github Pages is just fine an approach for hosting static websites, and even some lightly content driven ones at that, such as blogs. I'm going in assuming it will be a perfect fit for demos of Javascript components, and frontend mockups of web applications.
+
+Last week I threw up my project [Itinerary][Itinerary] on Git. Itinerary provides an easy way to prototype school semester schedules on-the-fly, without worrying about the specifics (such as what school a student goes to). With Itinerary, you just plug in the class information yourself in the "Schedule View" and get a real-time view of how your schedule will look in the "Calendar View". Despite being made to work with classes, there is no constraint on what can be input into the "Schedule View". Students can use this to also plan extracurricular activities, while others can use it for any type of schedule prototyping they desire.
+
+I also threw up a prototype for an Angular component I've been putting some work on lately. It's called [angular-tree-autocomplete][angular-tree-autocomplete]. The purpose of angular-tree-autocomplete, is to tackle an issue I didn't see addressed in [angular-ui-typeahead][angular-ui-typeahead]; to allow greater flexibility in separating the `viewValue` and `modelValue` of an `input` field with `ng-model` set. This was designed because a very specific use case required it (the association of `modelValue` to `viewValue` could require a database call, and extra hooks were needed upon autocomplete element selection to maintain the separation of `modelValue` and `viewValue` behind the scenes). Looking at it now, I think it was a bad idea to attempt rolling out a completely scratch implementation of this functionality; but I'm rolling with it and I hope to make this autocomplete more widely adoptable as time goes on.
+
+My introduction to GitHub Pages came in the form of a colleague, who reminded me last week that it is possible to host static pages with GitHub. Upon hearing this, I set up Git to host a website for Itinerary (especially easy if your repository is a website in the first place). While discussing GitHub Pages, my colleague also brought up the ability for them to be used for more content oriented static websites, using [Jekyll][Jekyll]. I made a mental note to take a look at this in the coming weekend, and I just went ahead and set it all up today. The result is what you see in front of you now. Right now my setup is pretty barebones and I intend to learn more about Jekyll in the coming days. I will go over Jekyll in a more in-depth manner once I've messed with it more, but for all the functionality it provides, getting a simple blog up and running with it is pretty effortless, when following the [GitHub overview][GitHub Jekyll] and the [official Jekyll documentation][Jekyll Docs]. Most of my setup time was chasing some dependencies down for it on Linux (in my case I needed `zlib1g-dev` in order to properly install the Jekyll gem, and I needed a Javascript runtime to start the server (haha) so I installed `nodejs`). One note I feel comfortable making right now, which is pretty obvious I suppose, is that Jekyll doesn't seem well suited for complex content management. A lot of methodologies described in the documentation just feel downright hacky. I'll describe more about this in the future, but I don't anticipate my needs being particularly demanding.
+
+[Itinerary]: 		     	https://github.com/gscoppino/Itinerary
+[GHPages]:   		     	https://pages.github.com/
+[Jekyll]:    		     	http://jekyllrb.com/
+[angular-tree-autocomplete]: 	https://github.com/gscoppino/angular-tree-autocomplete
+[angular-ui-typeahead]:      	http://angular-ui.github.io/bootstrap/#/typeahead
+[GitHub Jekyll]:	    	https://help.github.com/articles/using-jekyll-with-pages/
+[Jekyll Docs]:			http://jekyllrb.com/docs/home/
